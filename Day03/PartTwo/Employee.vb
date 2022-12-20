@@ -5,25 +5,28 @@
         Private _joinDate As DateTime
         Private _basicSalary As Double
         Private _totalSalary As Double
-
+        Private _rolejob As String
         'declare constructor
-        Public Sub New(empId As Integer, firstName As String, lastName As String, joinDate As Date, basicSalary As Double)
+        Public Sub New(empId As Integer, firstName As String, lastName As String, joinDate As Date, basicSalary As Double, rolejob As String)
             _empId = empId
             _firstName = firstName
             _lastName = lastName
             _joinDate = joinDate
             _basicSalary = basicSalary
             _totalSalary = basicSalary
+            _rolejob = rolejob
+
         End Sub
 
         'constructor overloading
-        Public Sub New(firstName As String, lastName As String, joinDate As Date, basicSalary As Double)
+        Public Sub New(firstName As String, lastName As String, joinDate As Date, basicSalary As Double, rolejob As String)
             _empId = New Random().Next(1, 10) 'random _id
             _firstName = firstName
             _lastName = lastName
             _joinDate = joinDate
             _basicSalary = basicSalary
             _totalSalary = basicSalary
+            _rolejob = rolejob
         End Sub
 
         Public Property EmpId As Integer
@@ -80,8 +83,23 @@
             End Set
         End Property
 
+        Public Property Rolejob As String
+            Get
+                Return _rolejob
+            End Get
+            Set(value As String)
+                _rolejob = value
+            End Set
+        End Property
+
         Public Overrides Function ToString() As String
-            Return $"EmpId : {EmpId}, firstName : {FirstName}, lastName : {LastName}, joinDate : {JoinDate}, basicSalary : {BasicSalary}"
+            Return $"
+EmpId : {EmpId}, 
+firstName : {FirstName}, 
+lastName : {LastName}, 
+joinDate : {JoinDate}, 
+basicSalary : {BasicSalary}, 
+rolejob : {Rolejob}"
         End Function
     End Class
 End Namespace

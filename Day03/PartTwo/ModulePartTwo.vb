@@ -18,24 +18,24 @@
             'Dim emp4 As New Programmer("Budi", "Budiman", DateTime.Now, 6_500_000)
             'Console.WriteLine(emp4.ToString())
 
-            Dim emp5 As New Programmer("Aji", "Saka", DateTime.Now, 6_500_000, 500_000)
-            Console.WriteLine(emp5.ToString())
+            'Dim emp5 As New Programmer("Aji", "Saka", DateTime.Now, 6_500_000, 500_000)
+            'Console.WriteLine(emp5.ToString())
 
-            emp5.Transportation = 750_000
-            Console.WriteLine(emp5.ToString())
+            'emp5.Transportation = 750_000
+            'Console.WriteLine(emp5.ToString())
 
-            emp5.BasicSalary = 5_000_000
-            Console.WriteLine(emp5.ToString())
+            'emp5.BasicSalary = 5_000_000
+            'Console.WriteLine(emp5.ToString())
 
-            Console.WriteLine("---------------------------------")
+            'Console.WriteLine("---------------------------------")
 
-            Dim emp6 As New ITSupport("Si Paling", "IT Support", DateTime.Now, 2_000_000, 650_000)
-            Console.WriteLine(emp6.ToString())
+            'Dim emp6 As New ITSupport("Si Paling", "IT Support", DateTime.Now, 2_000_000, 650_000)
+            'Console.WriteLine(emp6.ToString())
 
-            Console.WriteLine("-------------- Employee -------------------")
+            'Console.WriteLine("-------------- Employee -------------------")
 
-            Dim emp7 As New Employee("Employee", "Biasa", DateTime.Now, 2_000_000)
-            Console.WriteLine(emp7.ToString())
+            'Dim emp7 As New Employee("Employee", "Biasa", DateTime.Now, 2_000_000)
+            'Console.WriteLine(emp7.ToString())
 
         End Sub
     End Module

@@ -17,7 +17,7 @@ Module Program
         'ModuleDecision.GradeCase()
         'ModuleDecision.WhoIsTheGreatest()
         'ModuleDecision.OddEvenNumber
-        ModuleDateTime.ShowDate()
+        'ModuleDateTime.ShowDate()
 
         'Day 02
 
@@ -29,6 +29,57 @@ Module Program
         'Day 03
         'ModulePartOne.InitEmployee()
         'ModulePartTwo.InitEmployee()
+
+        'Array
+        'ModuleArray.InitListGeneric()
+        'ModuleArray.DisplayArray()
+
+        'Interface and Implementation
+
+        Dim IHr As IHR = New HR
+
+        Dim listEmp = IHr.InitEmployee()
+        IHr.DisplayEmployee(listEmp)
+
+
+
+        Dim salary = IHr.TotalGaji(listEmp)
+        Console.WriteLine($"Total Gaji: {salary}")
+
+        Dim inputrole = "QA"
+        Dim totem = IHr.TotalEmpRole(listEmp, inputrole)
+        Console.WriteLine($"Total {inputrole} : {totem}")
+
+
+        Dim inputsales = "Sales"
+        Dim totsal = IHr.TotalEmpRole(listEmp, inputsales)
+        Console.WriteLine($"Total {inputsales} : {totsal}")
+
+
+        Dim inputpro = "Programmer"
+        Dim totpro = IHr.TotalEmpRole(listEmp, inputpro)
+        Console.WriteLine($"Total {inputpro} : {totpro}")
+
+
+        Dim inputQaGaji = "QA"
+        Dim gajiQA = IHr.GajiEmpTotRole(listEmp, inputQaGaji)
+        Console.WriteLine($"Gaji QA {inputQaGaji} : {gajiQA}")
+
+
+
+        'Dim emp = IHr.FindEmployee(listEmp, 1)
+        'If emp IsNot Nothing Then
+        '    Console.WriteLine($"EMployee : {emp}")
+        'Else
+        '    Console.WriteLine("Ga ada")
+
+        'End If
+
+
+
+
+
+
     End Sub
 
     '    Sub SayMyName()
